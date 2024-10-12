@@ -28,3 +28,8 @@ Or, if you don't have GraalVM installed, you can run the native executable build
 You can then execute your native executable with: `./target/jwt-auth-1.0-SNAPSHOT-runner`
 
 If you want to learn more about building native executables, please consult https://quarkus.io/guides/building-native-image.
+
+## Running in DEV mode with Dev services
+
+This code project needs a PostgreSQL database. Because no DB parameters are configured in the dev profile, Quarkus will start a testcontainer containing a PostgresSQL database. The name of the database created inside the testcontainer is equal to 'quarkus'. When you want to login to the database the username and password are also equal to 'quarkus'.
+
