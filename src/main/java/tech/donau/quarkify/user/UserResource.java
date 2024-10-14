@@ -57,6 +57,6 @@ public class UserResource {
                         .build());
         }
 
-        return service.generateUserToken(existingUser.email, password);
+        return service.generateUserToken(existingUser.email, login);
     }
 }
