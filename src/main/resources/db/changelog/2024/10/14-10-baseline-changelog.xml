@@ -1,0 +1,26 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.25.xsd">
+	<changeSet author="pjk6" id="1724072091665-1">
+		<createTable tableName="product" >
+			<column autoIncrement="true" name="id" startWith="1" type="BIGINT">
+				<constraints nullable="false" primaryKey="true" primaryKeyName="product_pkey"/>
+			</column>
+			<column name="name" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="category" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="description" type="TEXT"/>
+			<column name="price" type="numeric(10, 2)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="quantity" type="INTEGER">
+				<constraints nullable="false"/>
+			</column>
+			<column name="created_at" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+</databaseChangeLog>
